@@ -8,10 +8,18 @@ body{
     font-size:xxx-large;
     font-weight:bolder;
 }*/
-/*img{
+img{
     height:500px;
-    width:500px;
-}*/
+    width: 500px;;
+}
+@media(max-width:600px){
+    img{
+        height:auto;
+        width:100%;
+    }
+
+}
+
 video{
     height:500px;
     
@@ -40,10 +48,17 @@ button{
     padding:20px;
     margin:20px;
 }
+
 nav{
     display:flex;
-    flex-direction:row;
-    gap:100px;
+    flex-direction:column;
+}
+@media(min-width:1024px){
+    nav{
+        display:flex;
+        flex-direction:row;
+        gap:100px;
+    }
 }
 #p1{
     font-style:normal;
@@ -52,15 +67,31 @@ nav{
     font-style:italic;
 }
 .pclass{
+    display:flex;
+    flex-direction:column;
     font-size:xx-large;
 }
-.grid{
-    display:grid;
+@media(min-width:1024px){
+    .pclass{
+        display:flex;
+        flex-direction:row;
+    }
 }
 .grid{
     display:grid;
+}
+@media(min-width:1024px){
+    .grid{
+        display:grid;
+        grid-template-columns: 33% 33% 33%;
+    }
 }
 .flowers{
     display:grid;
     grid-template-columns:50% 50%;
+}
+@media(max-width:600px){
+    .flowers{
+        display:inline;
+    }
 }
